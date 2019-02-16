@@ -98,7 +98,7 @@ The model worked well at track1(scene included in training data). But it didn't 
 
 So the model was trained again using dataset recorded at track2. Following image shows training result in 5 epoch.
 
-![alt text](./training_results_other_course.png)
+![alt text](./training_results_track2.png)
 
 Then, the model was tested two track.
 
@@ -142,6 +142,20 @@ I finally randomly shuffled the data set and put Y% of the data into a validatio
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
+![alt text](./images.png)
+
+#### 4. Extracted Features
+
+Extracted features at first layer in the model are shown below.
+
+![alt text](./hidden_layer_output1.png)
+![alt text](./hidden_layer_output2.png)
+![alt text](./hidden_layer_output3.png)
+
 ### Transfer Learninig (Inception V3)
 
 ![alt text](./model_tl.png)
+![alt text](./images_tl.png)
+![alt text](./hidden_layer_output1_tl.png)
+![alt text](./hidden_layer_output2_tl.png)
+![alt text](./hidden_layer_output3_tl.png)
