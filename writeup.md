@@ -116,33 +116,27 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+This figure shows distributions of training and validation data. 
 
-![alt text][image2]
+![alt text](./train.png)
+![alt text](./validation.png)
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+The distributions were not flat. So this time, data augmentation was implemented especially to increase data which steering angle value was not around zero (model.py line 35-70).
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+Specificly, when steering angle was more 0.1 or less -0.1, center, left and right images (and every flipped images) were added to dataset. This increased number of data data which steering angle value was not around zero by six times.
 
-Then I repeated this process on track two in order to get more data points.
+![alt text](./images_aug.png)
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+And then preprocessed this data by cropping
 
 ![alt text](./images.png)
+
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
+
+|                |track1|track2|
+| All data    | 24317| 5108|
+|Train data| 19453 | 4086|
+|Valid data | 4864 | 1022|
 
 #### 4. Extracted Features
 
@@ -154,6 +148,8 @@ Extracted features at first layer in the model are shown below.
 
 ### Transfer Learninig (Inception V3)
 
+[Tested at track1l](https://youtu.be/pyhaYlEJpZg)
+[Tested at track2](https://youtu.be/Cl2_GEv3AM0)
 ![alt text](./model_tl.png)
 ![alt text](./images_tl.png)
 ![alt text](./hidden_layer_output1_tl.png)
