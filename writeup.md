@@ -133,10 +133,11 @@ And then preprocessed this data by cropping
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-|                |track1|track2|
-| All data    | 24317| 5108|
-|Train data| 19453 | 4086|
-|Valid data | 4864 | 1022|
+|             | track1 | track2 |
+|:-----------:|:---------:|:----------:|
+| All data    | 24317 | 5108 | 
+| Train data | 19453 | 4086 |
+| Valid data | 4864 | 1022 |
 
 #### 4. Extracted Features
 
