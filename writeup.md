@@ -162,11 +162,11 @@ Inception V3 needs input image of 299x299. So resizing image layer was added and
 
 Movies which the model drove two track is following.
 
-[Tested at track1]()
+[Tested at track1](https://youtu.be/CU_Gzi0jzCo)
 
-[Tested at track2]()
+[Tested at track2](https://youtu.be/uNcmy4hA5-Y)
 
-Extracted features at first layer in the model are shown below. It seems that the model couldn't extract good features for predicting steering angle....
+Extracted features at first layer in the model are shown below. It seems that the model couldn't extract good features for predicting steering angle.... In other words, transfer learning needs proper pre-trained model for tasks like predicting steering angle... I think It was reason why this transfer learning didn't work well.
 
 ![alt text](./hidden_layer_output_tl.png)
 
